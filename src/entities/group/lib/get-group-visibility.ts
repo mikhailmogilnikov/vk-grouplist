@@ -3,7 +3,5 @@ enum EGroupVisibility {
   PRIVATE = 'private',
 }
 
-export const getGroupVisibility = (isClosed: boolean) => {
-  if (isClosed) return EGroupVisibility.PRIVATE;
-  return EGroupVisibility.PUBLIC;
-};
+export const getGroupVisibility = (isClosed: boolean) =>
+  isClosed ? EGroupVisibility.PRIVATE : EGroupVisibility.PUBLIC;

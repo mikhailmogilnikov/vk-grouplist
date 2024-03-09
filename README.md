@@ -1,6 +1,7 @@
 # VK Test Task - GroupList
 
-Link to live website
+- [Task description (RU)](./TASK.md)
+- Link to live website
 
 ### Technologies:
 
@@ -8,5 +9,7 @@ Link to live website
 - React
 - Feature Sliced Design (FSD)
 - VK UI
-- VK Icons
+- Redux Toolkit
+- Tanstack Query
+- i18next
 - ESLint

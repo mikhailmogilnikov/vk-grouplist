@@ -6,7 +6,7 @@ import {
   Panel,
 } from '@vkontakte/vkui';
 import { GroupsPage } from '@/pages/groups';
-import '@vkontakte/vkui/dist/vkui.css';
+import { modal } from './modal';
 
 interface MainProps {
   initialPanel: string;
@@ -17,6 +17,7 @@ export function App({ initialPanel }: MainProps) {
     <SplitLayout
       style={{ justifyContent: 'center' }}
       header={<PanelHeader delimiter='none' />}
+      modal={modal}
     >
       <SplitCol width='100%' stretchedOnMobile autoSpaced>
         <View activePanel={initialPanel}>
