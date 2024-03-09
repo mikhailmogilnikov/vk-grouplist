@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client';
 import { queryClient } from '@/shared/api/query-client';
-import { App } from './app';
-import { Providers } from './providers';
+import { App } from './app/app';
+import { Providers } from './app/providers';
 import '@vkontakte/vkui/dist/vkui.css';
 
 createRoot(document.getElementById('root')!).render(
