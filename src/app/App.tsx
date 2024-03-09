@@ -12,7 +12,7 @@ interface MainProps {
   initialPanel: string;
 }
 
-export function App({ initialPanel }: MainProps) {
+export const App = ({ initialPanel }: MainProps) => {
   return (
     <SplitLayout
       style={{ justifyContent: 'center' }}
@@ -28,4 +28,4 @@ export function App({ initialPanel }: MainProps) {
       </SplitCol>
     </SplitLayout>
   );
-}
+};
