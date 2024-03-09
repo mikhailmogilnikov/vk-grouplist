@@ -5,7 +5,7 @@ import {
   PanelHeader,
   Panel,
 } from '@vkontakte/vkui';
-import { HomePage } from '@/pages/home';
+import { GroupsPage } from '@/pages/groups';
 import '@vkontakte/vkui/dist/vkui.css';
 
 interface MainProps {
@@ -20,8 +20,8 @@ export function App({ initialPanel }: MainProps) {
     >
       <SplitCol width='100%' stretchedOnMobile autoSpaced>
         <View activePanel={initialPanel}>
-          <Panel id='main'>
-            <HomePage />
+          <Panel id='groups'>
+            <GroupsPage />
           </Panel>
         </View>
       </SplitCol>
