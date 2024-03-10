@@ -1,7 +1,7 @@
 import { ModalPage, ModalRoot } from '@vkontakte/vkui';
 import { GroupFiltersModal } from '@/features/groups/filters-modal';
 import { GroupFriendsModal } from '@/features/groups/friends-modal';
-import { useModal } from '@/shared/lib/hooks/useModal';
+import { useModal } from '@/shared/lib/hooks/use-modal';
 import { EModalRoutes } from '@/shared/model/types/routes.enum';
 
 export const Modal = () => {

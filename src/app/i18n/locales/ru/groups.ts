@@ -1,5 +1,30 @@
 const filters = {
   title: 'Фильтры',
+  submit_button: 'Применить',
+  form: {
+    private_type: {
+      title: 'Приватность группы',
+      any: 'Любая',
+      public: 'Публичная',
+      private: 'Приватная',
+    },
+    avatar_color: {
+      title: 'Цвет аватара',
+      red: 'Красный',
+      green: 'Зелёный',
+      yellow: 'Жёлтый',
+      blue: 'Синий',
+      purple: 'Фиолетовый',
+      white: 'Белый',
+      undefined: 'Без цвета',
+    },
+    friends_in_group: {
+      title: 'Наличие общих друзей в группе',
+      any: 'Без разницы',
+      with_friends: 'Присутствуют',
+      without_friends: 'Отсутствуют',
+    },
+  },
 };
 
 export const groups = {
@@ -17,6 +42,9 @@ export const groups = {
   visibility: {
     public: 'Открытая группа',
     private: 'Закрытая группа',
+  },
+  friends_modal: {
+    title: 'Друзья в сообществе',
   },
   filters,
 };

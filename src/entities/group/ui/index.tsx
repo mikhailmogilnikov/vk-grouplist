@@ -1,6 +1,7 @@
 import { RichCell } from '@vkontakte/vkui';
 import { useTranslation } from 'react-i18next';
-import { useModal } from '@/shared/lib/hooks/useModal';
+import { useFriendsInModal } from '@/shared/lib/hooks/use-friends-in-group';
+import { useModal } from '@/shared/lib/hooks/use-modal';
 import { EModalRoutes } from '@/shared/model/types/routes.enum';
 import { EGroupVisibility } from '../model/types/group-visibility.enum';
 import { Group } from '../model/types/group.type';
@@ -14,8 +15,10 @@ type Props = {
 export const GroupCell = ({ data }: Props) => {
   const [t] = useTranslation();
   const { setModal } = useModal();
+  const { setFriendsInModal } = useFriendsInModal();
 
   const handleClickFriendslist = () => {
+    setFriendsInModal(data.friends);
     setModal(EModalRoutes.GROUP_FRIENDS);
   };
 

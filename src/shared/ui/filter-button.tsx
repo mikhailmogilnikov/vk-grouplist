@@ -4,10 +4,15 @@ import { useTranslation } from 'react-i18next';
 
 type Props = {
   onClick?: () => void;
+  isDisabled?: boolean;
   activeFiltersCount?: number;
 };
 
-export const FilterButton = ({ onClick, activeFiltersCount = 0 }: Props) => {
+export const FilterButton = ({
+  onClick,
+  isDisabled = false,
+  activeFiltersCount = 0,
+}: Props) => {
   const [t] = useTranslation();
 
   const isActive = activeFiltersCount > 0;
@@ -16,6 +21,7 @@ export const FilterButton = ({ onClick, activeFiltersCount = 0 }: Props) => {
 
   return (
     <Button
+      disabled={isDisabled}
       before={<Icon20SlidersOutline />}
       size='l'
       align='center'

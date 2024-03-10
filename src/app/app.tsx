@@ -6,7 +6,7 @@ import {
   Panel,
 } from '@vkontakte/vkui';
 import { GroupsPage } from '@/pages/groups';
-import { usePanel } from '@/shared/lib/hooks/usePanel';
+import { usePanel } from '@/shared/lib/hooks/use-panel';
 import { EPanelRoutes } from '@/shared/model/types/routes.enum';
 import { Modal } from './modal';
 
@@ -19,7 +19,7 @@ const App = () => {
       header={<PanelHeader delimiter='none' />}
       modal={<Modal />}
     >
-      <SplitCol width='100%' stretchedOnMobile autoSpaced>
+      <SplitCol maxWidth={700} stretchedOnMobile autoSpaced>
         <View activePanel={panel}>
           <Panel id={EPanelRoutes.GROUPS}>
             <GroupsPage />

@@ -1,7 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { EPanelRoutes } from '@/shared/model/types/routes.enum';
+import { EModalRoutes, EPanelRoutes } from '@/shared/model/types/routes.enum';
 
-const initialState = {
+const initialState: {
+  activePanel: EPanelRoutes;
+  activeModal: EModalRoutes | null;
+} = {
   activePanel: EPanelRoutes.GROUPS,
   activeModal: null,
 };
