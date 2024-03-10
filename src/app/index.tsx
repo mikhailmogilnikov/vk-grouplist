@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import { queryClient } from '@/shared/api/query-client';
-import { App } from './app';
+import App from './app';
 import { Providers } from './providers';
 import '@vkontakte/vkui/dist/vkui.css';
 
