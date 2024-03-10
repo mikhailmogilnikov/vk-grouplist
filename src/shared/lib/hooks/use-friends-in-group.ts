@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { User } from '@/shared/model/types/user.type';
+import { User } from '../../model/types/user.type';
 
 export const useFriendsInModal = () => {
   const dispatch = useDispatch();
