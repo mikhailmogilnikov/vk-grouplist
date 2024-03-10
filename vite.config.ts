@@ -17,7 +17,6 @@ function handleModuleDirectivesPlugin() {
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), tsconfigPaths(), handleModuleDirectivesPlugin()],
-
   build: {
     outDir: 'build',
   },
