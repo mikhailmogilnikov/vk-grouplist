@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { Icon56SearchOutline } from '@vkontakte/icons';
 import { Div, Group, Placeholder, Spinner } from '@vkontakte/vkui';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { GroupCell } from '@/entities/group';
 import { useModal } from '@/shared/lib/hooks/use-modal';
 import { EModalRoutes } from '@/shared/model/types/routes.enum';
@@ -14,6 +15,7 @@ export const GroupList = () => {
   const { filteredData, activeFiltersCount } = useFilterForGroups(data);
   const { setModal } = useModal();
   const [showPlaceholder, setShowPlaceholder] = useState(false);
+  const [t] = useTranslation();
 
   useEffect(() => {
     if (!isLoading) {
@@ -34,7 +36,7 @@ export const GroupList = () => {
     } else {
       return showPlaceholder ? (
         <Placeholder icon={<Icon56SearchOutline />}>
-          Ничего не найдено
+          {t('groups.placeholder')}
         </Placeholder>
       ) : null;
     }

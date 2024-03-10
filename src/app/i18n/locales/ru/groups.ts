@@ -46,5 +46,6 @@ export const groups = {
   friends_modal: {
     title: 'Друзья в сообществе',
   },
+  placeholder: 'Ничего не найдено',
   filters,
 };
