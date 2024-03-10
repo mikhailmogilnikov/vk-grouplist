@@ -1,7 +1,7 @@
 # VK Test Task - GroupList
 
-[Task description (RU)](./TASK.md)
-[Link to live website](https://vk-grouplist.vercel.app)
+- [Task description (RU)](./TASK.md)
+- [Link to live website](https://vk-grouplist.vercel.app)
 
 ### Technologies:
 
