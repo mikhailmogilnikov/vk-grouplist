@@ -1,6 +1,8 @@
 import { RichCell } from '@vkontakte/vkui';
 import { useTranslation } from 'react-i18next';
-import { getGroupVisibility } from '../lib/get-group-visibility';
+import { useModal } from '@/shared/lib/hooks/useModal';
+import { EModalRoutes } from '@/shared/model/types/routes.enum';
+import { EGroupVisibility } from '../model/types/group-visibility.enum';
 import { Group } from '../model/types/group.type';
 import { GroupAvatar } from './avatar';
 import { FriendsStack } from './friends';
@@ -11,8 +13,18 @@ type Props = {
 
 export const GroupCell = ({ data }: Props) => {
   const [t] = useTranslation();
+  const { setModal } = useModal();
 
-  const groupVisibilityType = getGroupVisibility(data.closed);
+  const handleClickFriendslist = () => {
+    setModal(EModalRoutes.GROUP_FRIENDS);
+  };
+
+  const isClosedGroup = data.closed;
+
+  const groupVisibilityType = isClosedGroup
+    ? EGroupVisibility.PRIVATE
+    : EGroupVisibility.PUBLIC;
+
   const groupVisibility = t(`groups.visibility.${groupVisibilityType}`);
 
   const subscribers = t('groups.members.t', { count: data.members_count });
@@ -22,7 +34,14 @@ export const GroupCell = ({ data }: Props) => {
       before={<GroupAvatar color={data.avatar_color} />}
       caption={subscribers}
       afterCaption={groupVisibility}
-      bottom={data.friends && <FriendsStack friends={data.friends} />}
+      bottom={
+        data.friends && (
+          <FriendsStack
+            friends={data.friends}
+            onClick={handleClickFriendslist}
+          />
+        )
+      }
     >
       {data.name}
     </RichCell>

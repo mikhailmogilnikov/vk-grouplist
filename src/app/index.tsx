@@ -6,6 +6,6 @@ import '@vkontakte/vkui/dist/vkui.css';
 
 createRoot(document.getElementById('root')!).render(
   <Providers client={queryClient}>
-    <App initialPanel='groups' />
+    <App />
   </Providers>,
 );

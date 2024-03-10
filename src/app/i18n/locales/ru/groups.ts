@@ -1,3 +1,7 @@
+const filters = {
+  title: 'Фильтры',
+};
+
 export const groups = {
   header: 'Список групп',
   members: {
@@ -14,4 +18,5 @@ export const groups = {
     public: 'Открытая группа',
     private: 'Закрытая группа',
   },
+  filters,
 };

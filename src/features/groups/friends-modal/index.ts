@@ -1,0 +1,1 @@
+export { GroupFriendsModal } from './ui';
